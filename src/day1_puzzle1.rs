@@ -1,7 +1,7 @@
 use std::fs;
 
-pub fn get_answer() {
-    let contents = fs::read_to_string("./src/day1puzzle1.txt")
+pub fn get_answer() -> i32 {
+    let contents = fs::read_to_string("./src/day1_puzzle1.txt")
         .expect("Should have been able to read the file");
 
     let contents_arr = contents.split("\n");
@@ -9,7 +9,7 @@ pub fn get_answer() {
     let total = contents_arr
         .fold(0, |acc, x| acc + get_outer_digits(x));
 
-    println!("Total is {total}");
+    return total;
 }
 
 fn get_outer_digits(text: &str) -> i32 {
