@@ -1,7 +1,7 @@
 use std::fs;
 
-fn main() {
-    let contents = fs::read_to_string("./puzzle1.txt")
+pub fn get_answer() {
+    let contents = fs::read_to_string("./src/day1puzzle1.txt")
         .expect("Should have been able to read the file");
 
     let contents_arr = contents.split("\n");
